@@ -1,0 +1,30 @@
+<h1>The Ruff Life</h1>
+
+<div *ngIf="!user">
+<a [routerLink]="['/login']">Login or Sign Up</a> |
+</div>
+
+<div *ngIf="user">
+  <!-- <a (click)="logout()">Logout</a> -->
+  <a (click)="logout()">Logout</a>
+</div>
+
+
+<div>
+<div *ngIf="user">
+  <a [routerLink]="['/profile']">Profile</a>
+</div>
+</div>
+
+
+
+<div id="navbar">
+  <a [routerLink]="['/home']">Home </a>
+  <a [routerLink]="['/hotels']">Hotels </a>
+  <a [routerLink]="['/restaurants']">Restaurants </a>
+  <a [routerLink]="['/parks']">Parks </a>
+  <a [routerLink]="['/grooming']"> Dog Groomers </a>
+  <a [routerLink]="['/stores']"> Dog Stores </a>
+  <a [routerLink]="['/dogcare']"> Dog Day Care/Boarding</a>
+  <a [routerLink]="['/vets']"> Dog Vets </a>
+</div>

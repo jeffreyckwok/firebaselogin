@@ -1,0 +1,27 @@
+<div class="loginmodal-container">
+  <h1>Login to Your Social Account</h1>
+  <button  class="facebook" (click)="loginFacebook()" md-raised-button>
+    <i class="fa fa-facebook" ></i> Login With Facebook
+  </button>
+  <button  class='google' (click)="loginGoogle()" md-raised-button>
+      <i class="fa fa-google" ></i> Login With Google
+  </button>
+  <button  color="primary" (click)="loginTwitter()" md-raised-button>
+    <i class="fa fa-twitter" ></i> Login With Twitter
+  </button>
+  <button class="github" (click)="loginGithub()" md-raised-button>
+      <i class="fa fa-github" ></i> Login With Github
+  </button>
+
+</div>
+
+<div class = "loginmodal-container">
+
+  <form (submit)="login(formData)" #formData="ngForm">
+    <p><label>Sign in with a username to continue:</label></p>
+    <p>
+    <input id="txt" type="text" name="name" ngModel>
+    <input id="sub" type="submit" value="Enter"></p>
+
+  </form>
+</div>

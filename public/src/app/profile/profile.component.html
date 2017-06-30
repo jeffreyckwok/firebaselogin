@@ -1,0 +1,13 @@
+<div *ngIf="user">
+  <h2>{{user.displayName}}</h2>
+  <img src="{{user.photoURL}}">
+  <p>{{user.uid}}</p>
+</div>
+
+<div class="card-header col-md-10 mx-auto text-md-center" *ngFor="let fav of favorites">
+  <img class="img-fluid rounded"src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference={{fav.result.photos[0].photo_reference}}&key=AIzaSyCWxzap9mC-3SFSRdKyaWuMVtOCaoGSj04">
+  <h1 class="card-title"> <a [routerLink]="['/details', fav.result.place_id]"> {{fav.result.name}} </a> </h1>
+  <h3>Rating: {{fav.result.rating}} </h3>
+  <h4>Address: {{fav.result.formatted_address}}</h4>
+  <h5>Phone: {{fav.result.formatted_phone_number}}</h5>
+</div>
